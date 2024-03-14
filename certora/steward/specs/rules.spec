@@ -265,7 +265,7 @@ rule only_RISK_COUNCIL_can_call__updateGsmBuySellFees() {
     updateGsmBuySellFees(e,gsm,buyFee,sellFee);
     assert (e.msg.sender==RISK_COUNCIL());
 }
-rule only_RISK_COUNCIL_can_call__setControlledFacilitator() {
+rule only_owner_can_call__setControlledFacilitator() {
     env e;
     address[] facilitatorList;
     bool approve;
